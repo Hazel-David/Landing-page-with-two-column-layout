@@ -1,0 +1,190 @@
+// Variables
+:root {
+    --Bright-Blue: hsl(224, 93%, 58%);
+    --Moderate-Cyan: hsl(170, 45%, 43%);
+    --Light-Grayish-Blue: hsl(240, 75%, 98%);
+    --Light-Gray: hsl(0, 0%, 75%);
+    --Very-Dark-Blue: hsl(243, 87%, 12%);
+    --Desaturated-Blue: hsl(238, 22%, 44%);
+}
+
+// Global Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100vw;
+    height: 100vh;
+}
+
+// Header styles
+.body {
+    header {
+        div {
+            ul {
+                li {
+                    a {
+                        color: var(--Very-Dark-Blue);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Productive Section
+.productivity-section {
+    background-image: url('/fylo-landing-page-with-two-column-layout-master/images/bg-curve-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+}
+
+// Fylo More Section
+#fylo-more {
+    a {
+        display: inline;
+        border-bottom: 1px solid var(--Moderate-Cyan);
+        text-align: center;
+        text-decoration: none;
+        color: var(--Moderate-Cyan);
+    }
+}
+
+// Testimonial Container
+.testimonial-container {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    background-color: white;
+    width: 50%; // Default width
+}
+
+// Profile
+.profile {
+    background-color: white;
+}
+
+// Header and Footer Logos
+.header-logo img,
+.footer-logo img {
+    max-width: 166px;
+    height: auto;
+}
+
+// Form Text
+.form-text {
+    font-size: 0.875em;
+    margin-top: 0.25em;
+    transition: opacity 1s ease-out;
+    opacity: 0; // Initially hidden
+
+    &.visible {
+        opacity: 1; // Make it visible
+    }
+}
+
+// Free Access
+.free-access {
+    background-color: var(--Desaturated-Blue);
+}
+
+// Button Responsive
+.btn-responsive {
+    width: 100%; // Full width by default
+
+    @media (min-width: 768px) {
+        width: 30%; // 30% width on medium screens and up
+    }
+}
+
+// Footer
+footer {
+    background-color: var(--Very-Dark-Blue);
+}
+
+// List Styles
+ul {
+    li {
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+// Socials
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem; // Space between icons
+    padding: 0; // Remove default padding
+    list-style: none; // Remove default list styles
+
+    @media (max-width: 767.98px) {
+        justify-content: center; // Center items horizontally
+    }
+
+    li {
+        height: 40px;
+        width: 40px;
+        border: 1px solid white; // Visual debugging
+        border-radius: 50%; // Circle shape
+        display: flex;
+        align-items: center; // Vertically center the icon
+        justify-content: center; // Horizontally center the icon
+
+        i {
+            font-size: 1.2rem; // Adjust icon size if needed
+        }
+    }
+}
+
+// Responsive adjustments
+@media screen and (max-width: 768px) {
+    .header-logo img,
+    .footer-logo img {
+        max-width: 126px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header-logo img,
+    .footer-logo img {
+        max-width: 106px;
+    }
+
+    .testimonial-container,
+    .productivity-advice {
+        width: 100%; // Full width on small screens
+    }
+
+    .productivity-text h1 {
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    .productivity-section {
+        background: url('/fylo-landing-page-with-two-column-layout-master/images/bg-curve-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #fylo-more {
+        text-align: center; // Center the text
+        margin: 0 auto; // Center the container horizontally
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header-logo img,
+    .footer-logo img {
+        max-width: 86px;
+    }
+}

@@ -1,0 +1,169 @@
+:root {
+  --Bright-Blue: hsl(224, 93%, 58%);
+  --Moderate-Cyan: hsl(170, 45%, 43%);
+  --Light-Grayish-Blue: hsl(240, 75%, 98%);
+  --Light-Gray: hsl(0, 0%, 75%);
+  --Very-Dark-Blue: hsl(243, 87%, 12%);
+  --Desaturated-Blue: hsl(238, 22%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 100vw;
+  height: 100vh;
+}
+
+.body header div ul li a {
+  color: var(--Very-Dark-Blue);
+}
+
+.productivity-section {
+  background-image: url("/images/bg-curve-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+#fylo-more a {
+  display: inline;
+  border-bottom: 1px solid var(--Moderate-Cyan);
+  text-align: center;
+  text-decoration: none;
+  color: var(--Moderate-Cyan);
+}
+
+.testimonial-container {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  background-color: white;
+  width: 50%;
+}
+
+.profile {
+  background-color: white;
+}
+
+.header-logo img,
+.footer-logo img {
+  max-width: 166px;
+  height: auto;
+}
+
+.form-text {
+  font-size: 0.875em;
+  margin-top: 0.25em;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+}
+.form-text.visible {
+  opacity: 1;
+}
+
+.free-access {
+  background-color: var(--Desaturated-Blue);
+}
+
+.btn-responsive {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .btn-responsive {
+    width: 30%;
+  }
+}
+
+footer {
+  background-color: var(--Very-Dark-Blue);
+}
+
+ul li {
+  list-style-type: none;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 767.98px) {
+  .socials {
+    justify-content: center;
+  }
+}
+.socials li {
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.socials li i {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .header-logo img,
+  .footer-logo img {
+    max-width: 126px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header-logo img,
+  .footer-logo img {
+    max-width: 106px;
+  }
+  .testimonial-container,
+  .productivity-advice {
+    width: 100%;
+  }
+  .productivity-text h1 {
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .productivity-section {
+    background: url("/images/bg-curve-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  #fylo-more {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 450px) {
+  .header-logo img,
+  .footer-logo img {
+    max-width: 86px;
+  }
+}/*# sourceMappingURL=style.css.map */
+
+
+/* Default invalid border color */
+input.invalid {
+  border: 1px solid red;
+}
+
+/* Different invalid border color for second form */
+.form-second input.invalid {
+  border: 1px solid white;
+}
+
+/* Default valid border color */
+input.valid {
+  border: 1px solid green;
+}
